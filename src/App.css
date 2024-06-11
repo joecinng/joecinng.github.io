@@ -1,0 +1,373 @@
+.navbar {
+    background-color: black !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+.navbar .navbar-nav {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+}
+  
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar .nav-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.section {
+    height: 100vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    transition: 0.5s;
+}
+
+#aboutme, #projects, #work-experiences, #contact {
+    display: block;
+}
+
+.nav-link.active {
+    color: white;
+}
+
+.navbar-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/*============================== Home Page ==============================*/
+.home-name {
+    font-size: 55px !important;
+    font-weight: 500;
+}
+
+.tagline {
+    color: aqua;
+}
+
+#home p { 
+    font-size: large;
+}
+
+.btn-style {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left:20px;
+    padding-right: 20px;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    align-items: center;
+    display: flex;
+    align-content: center;
+    font-size: large;
+}
+
+.btn-style:hover {
+    color: black;
+    background-color: white;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.btn-style i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+
+/*============================== About Me ==============================*/
+#aboutme .profile-pic {
+    width: 70%;
+    height: 70%;
+    clip-path: circle();
+}
+
+#aboutme p {
+    line-height: 1.8rem;
+}
+
+/* CustomTabs.css */
+#aboutme .nav-tabs {
+    border-bottom: none;
+}
+
+#aboutme .nav-tabs .nav-link {
+    border: none;
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#aboutme .nav-tabs .nav-link.active {
+    border: none;
+    background-color: transparent;
+    color: white;
+    display: inline-block;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#aboutme .nav-tabs .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: aqua;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+#aboutme .nav-tabs .nav-link.active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#aboutme .nav-tabs .nav-link:hover::after {
+    transform: scaleX(0); 
+}
+
+.text-grey {
+    color: grey;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+/*============================== Projects Page ==============================*/
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.carousel-caption h3 {
+    color: #FFD700;
+}
+
+.carousel-caption p {
+    color: white;
+}
+
+.carousel-caption .demo-accounts,
+.carousel-caption .note {
+    margin-top: 10px;
+}
+
+.carousel-caption .note {
+    color: yellow;
+    font-weight: bold;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 11; /* Higher than the project container */
+    width: 5%; /* Adjust as needed for larger click area */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for visibility */
+    border-radius: 50%;
+    padding: 25px 25px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    z-index: 11; /* Higher than the project container */
+    bottom: -30px; /* Adjust as needed to move the dots up or down */
+}
+
+.carousel-indicators li {
+    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for visibility */
+}
+
+.project-section {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 550px; /* Adjust height as needed */
+}
+
+.project-container {
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    z-index: 10; /* Ensures the project container is above the image */
+    max-width: 50%;
+}
+
+.project-info {
+    padding: 10px 20px;
+    background-color: #4169E1;
+    color: white;
+    border-radius: 10px;
+}
+
+.project-description {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.project-note {
+    color: yellow;
+    font-weight: bold;
+}
+
+.project-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 70%;
+    height: 10px !important;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-featured {
+    color: aqua;
+}
+
+.project-title {
+    padding-top: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.project-title button {
+    font-size: 1.7rem !important;
+    margin-left: 15px;
+    background-color: transparent;
+    color: white;
+    clip-path: circle();
+}
+
+/*============================== Contact Page ==============================*/
+.social-icon a {
+    color: white;
+    border: solid 2px white;
+    border-radius: 50%;
+    margin: 10px;
+    padding: 20px;
+    display: inline-flex;
+    line-height: 1;
+}
+
+.social-icon a:hover {
+    color: black;
+    background-color: white;
+    transition: color 0.5s, background-color 0.5s;
+}
+
+.bigger-icon {
+    font-size: 35px;
+}
+
+
+/*============================== Animation ==============================*/
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+.nav-link {
+    opacity: 0; /* Start hidden */
+    animation: slideInFromTop 0.5s forwards; /* Slide in and keep the final state */
+}
+  
+.nav-link:nth-child(1) {
+    animation-delay: 0.3s;
+}
+  
+.nav-link:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.nav-link:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.nav-link:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.nav-link:nth-child(5) {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#home h1, #home p, #home img, #home span, #home .btn-style {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#home h1, #home span, #home p, #home .btn-style {
+    animation-delay: 1.5s; 
+}
+
+#home img {
+    animation-delay: 2s;
+}
+
+.animated-picture {
+    animation: slideIn 3s ease-in-out;
+}
+
+
+
