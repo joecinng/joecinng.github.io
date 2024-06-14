@@ -25,22 +25,15 @@ const CustomNavbar = () => {
     }, []);
 
     const updateActiveNavLink = (entries) => {
-        document.querySelectorAll('.navbar-link').forEach(link => {
-            link.classList.remove('active');
-        });
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 setActiveLink(entry.target.id);
-                document.querySelector('.' + entry.target.id + '-btn').classList.add('active');
             }
         });
     };
 
     const onUpdateActiveLink = (value) => {
-        setActiveLink("");
-        document.querySelectorAll('.navbar-link').forEach(link => {
-            link.classList.remove('active');
-        });        
+        setActiveLink("");      
         const targetSection = document.getElementById(value);
         const navbarHeight = document.querySelector('.navbar').offsetHeight;
         const offsetPosition = targetSection.offsetTop - navbarHeight;

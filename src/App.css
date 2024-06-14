@@ -157,55 +157,108 @@
     font-weight: 500;
 }
 
-/*============================== Projects Page ==============================*/
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-}
-
-.carousel-caption h3 {
-    color: #FFD700;
-}
-
-.carousel-caption p {
+/*============================== Skills Page ==============================*/
+#skills .button {
     color: white;
+    background-color: black;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #555555;
 }
 
-.carousel-caption .demo-accounts,
-.carousel-caption .note {
-    margin-top: 10px;
+#skills .button.active {
+    color: black;
+    background-color: white;
+    border: none;
 }
 
-.carousel-caption .note {
-    color: yellow;
-    font-weight: bold;
+#skills .button:hover {
+    border: 1px solid white;
+    transition: border 0.4s;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    z-index: 11; /* Higher than the project container */
-    width: 5%; /* Adjust as needed for larger click area */
+#skills .button.active:hover {
+    border: none;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for visibility */
-    border-radius: 50%;
-    padding: 25px 25px;
+#skills .skills-box {
+    border: 2px solid #555555;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 20px;
+    display: block;
+    margin-left: 10px;
+    text-align: center;
 }
 
-/* Carousel Indicators */
-.carousel-indicators {
-    z-index: 11; /* Higher than the project container */
-    bottom: -30px; /* Adjust as needed to move the dots up or down */
+#skills .active-skills-box {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 20px;
+    display: block;
+    margin-left: 10px;
+    text-align: center;
 }
 
-.carousel-indicators li {
-    background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background for visibility */
+.icon-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
 }
 
+#skills .skills-box:hover {
+    border: 2px solid white;
+    transition: border 0.4s;
+    cursor: pointer;
+}
+
+.icon-container .tooltip {
+    font-size: 19px;
+    font-weight: 500;
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the icon */
+    left: 50%;
+    margin-left: -60px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icon-container .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.icon-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+#skills .soft-skills-icon {
+    font-size: 2.4rem;
+}
+
+#skills .skills-box h4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+/*============================== Projects Page ==============================*/
 .project-section {
     position: relative;
     width: 100%;
@@ -273,9 +326,47 @@
     clip-path: circle();
 }
 
+.project-title button:hover {
+    color: cyan;
+    transition: color 0.4s ease-in-out;
+}
+
+/*============================== Work Experience Page ==============================*/
+.vertical-line-icon {
+    display: table;
+    height: 100%;
+}
+.vertical-line-icon:after {
+    content: '';
+    display: table;
+    margin: 0 10px;
+    width: 2px;
+    height: 90%;
+    background-color: #555555;
+    margin-top:5px;
+}
+.last-vertical-line:after {
+    height: 65% !important;
+}
+.work-box {
+    border: 2px solid #555555;
+    border-radius: 20px;
+    padding: 15px 20px;
+    display: block;
+    margin-left: 10px;
+}
+#work-experiences .grey-text {
+    color: grey;
+    font-weight: 500;
+    font-style: italic;
+    font-size:18px;
+}
+
+
 /*============================== Contact Page ==============================*/
 .social-icon a {
-    color: white;
+    color: black;
+    background-color: white;
     border: solid 2px white;
     border-radius: 50%;
     margin: 10px;
@@ -285,8 +376,9 @@
 }
 
 .social-icon a:hover {
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: black;
+    border: solid 2px white;
     transition: color 0.5s, background-color 0.5s;
 }
 
@@ -294,6 +386,38 @@
     font-size: 35px;
 }
 
+#contact form {
+    background: black;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid lightgrey;
+}
+
+#contact form label {
+    color: #bbb;
+}
+
+#contact form input, #contact form textarea {
+    background: black;
+    color: white;
+    border: 1px solid #555;
+}
+
+#contact form input::placeholder, form textarea::placeholder {
+    color: lightgrey !important;
+}
+
+#contact form button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid white;
+    font-weight: 500;
+    width: 100%;
+}
 
 /*============================== Animation ==============================*/
 @keyframes slideInFromTop {

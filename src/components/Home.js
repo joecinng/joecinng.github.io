@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/image/header-img.svg"
+import headerImg from "../assets/image/header-img.svg";
+import resume from "../assets/pdf/resume.pdf";
 
 const Home = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -44,6 +45,14 @@ const Home = () => {
         }
     }
 
+    const handleDownload = () => {
+        // Create a link element
+        const link = document.createElement('a');
+        link.href = resume;
+        link.download = 'joecinng_resume.pdf';
+        link.click();
+    };
+
     return (
         <section id="home" class="home section text-white">
             <Container>
@@ -54,7 +63,7 @@ const Home = () => {
                         </span>
                         <p className="home-name">{`Joe Cin NG`}</p>
                         <p><span id="description-text">I am a Software Developer based in Melbourne, Australia. I am passionate about creating innovative solutions and exploring new technologies.</span></p>
-                        <button onClick={()=>console.log("connect")} class="btn-style"><i class="bi bi-cloud-arrow-down-fill"></i>Resume</button>
+                        <button onClick={handleDownload} class="btn-style"><i class="bi bi-cloud-arrow-down-fill"></i>Resume</button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImg} alt="Header image"></img>
