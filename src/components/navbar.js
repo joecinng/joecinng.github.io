@@ -6,7 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 const CustomNavbar = () => {
 
     const [ activeLink, setActiveLink ] = useState('home');
-    const [ scrolled, seScrolled ] = useState(false);
+    const [ scrolled ] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(updateActiveNavLink, {

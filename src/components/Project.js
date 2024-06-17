@@ -1,5 +1,5 @@
-import { Container, Row, Col } from "react-bootstrap";
-import React, { useState } from "react"; 
+import { Container } from "react-bootstrap";
+import React, { useState } from "react";
 import Carousel from 'react-bootstrap/Carousel';
 import Screenshot from "../assets/image/screenshot.png"; // Example image, replace as needed
 
@@ -16,7 +16,7 @@ const data = [
     note: "The Back-End of this application is hosted on a free server, it takes about 20 seconds to respond to the initial request."
   },
   {
-    image: require('../assets/image/600x600.jpg'), 
+    image: require('../assets/image/600x600.jpg'),
     featured: "Another Featured Project",
     title: "Project Two",
     description: "Description of the second project.",
@@ -24,60 +24,61 @@ const data = [
     note: ""
   },
   {
-    image: require('../assets/image/600x600.jpg'), 
+    image: require('../assets/image/600x600.jpg'),
     featured: "Yet Another Project",
     title: "Project Three",
     description: "Description of the third project.",
     demoAccounts: [],
     note: ""
-  } 
+  }
 ];
 
 const Project = () => {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
-      setIndex(selectedIndex);
+    setIndex(selectedIndex);
   };
 
   return (
-      <section id="projects" className="projects section text-white">
-          <Container fluid>
-              <h1 className="py-5 text-center">My Projects</h1>
-              <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-                  {data.map((project, idx) => (
-                      <Carousel.Item key={idx}>
-                          <div className="project-section">
-                              <div className="project-image">
-                                  <img src={project.image} alt={`Screenshot of ${project.title}`} />
-                              </div>
-                              <div className="project-container">
-                                  <h5 className="project-featured">{project.featured}</h5>
-                                  <h2 className="project-title">
-                                      {project.title} <button href=""><i className="bi bi-box-arrow-up-right"></i></button>
-                                  </h2>
-                                  <div className="project-info">
-                                      <p className="project-description">
-                                          {project.description}
-                                      </p>
-                                      {project.demoAccounts.length > 0 && (
-                                          <div className="project-demo-accounts">
-                                              <p><b>Demo Accounts:</b></p>
-                                              {project.demoAccounts.map((account, index) => (
-                                                  <p key={index}>Email: {account.email} Pass: {account.password}</p>
-                                              ))}
-                                          </div>
-                                      )}
-                                      {project.note && (
-                                          <p><span className="project-note">Note:</span> {project.note}</p>
-                                      )}
-                                  </div>
-                              </div>
-                          </div>
-                      </Carousel.Item>
-                  ))}
-              </Carousel>
-          </Container>
-      </section>
+    <section id="projects" className="projects section text-white">
+      <Container fluid>
+        <h3 className="text-center">My Projects</h3>
+        <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+          {data.map((project, idx) => (
+            <Carousel.Item key={idx}>
+              <div className="project-section">
+                <div className="project-image">
+                  <img src={project.image} alt={`Screenshot of ${project.title}`} />
+                </div>
+                <div className="project-container">
+                  <h6 className="project-featured">{project.featured}</h6>
+                  <h4 className="project-title">
+                    {project.title} <button href=""><i className="bi bi-box-arrow-up-right"></i></button>
+                  </h4>
+                  <div className="project-info">
+                    <p className="project-description">
+                      {project.description}
+                    </p>
+                    {project.demoAccounts.length > 0 && (
+                      <div className="project-demo-accounts">
+                        <p><b>Demo Accounts:</b><br />
+                          {project.demoAccounts.map((account, index) => (
+                            <span key={index}>Email: {account.email} Pass: {account.password}<br /></span>
+                          ))}
+                        </p>
+                      </div>
+                    )}
+                    {project.note && (
+                      <p><span className="project-note">Note:</span> {project.note}</p>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </Container>
+    </section>
   );
 }
 

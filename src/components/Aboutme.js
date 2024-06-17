@@ -7,12 +7,12 @@ const Aboutme = () => {
     return (
         <section id="aboutme" class="aboutme section text-white">
             <Container>
-                <h1 className="py-3">About Me</h1>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={12} xl={5} className="text-center mx-auto">
+                        <h3 className="py-3">About Me</h3>
                         <img src={MyPicture} alt="My profile picture" className="profile-pic"></img>
                     </Col>
-                    <Col xs={12} md={6} xl={7}>
+                    <Col xs={12} md={12} xl={7}>
                         <p>
                             Hello! I'm a dedicated Software Developer based in Melbourne, Australia. 
                             I started my tech journey with a Bachelor of Computer Science in Malaysia and graduated from Swinburne University of Technology in July 2022. 

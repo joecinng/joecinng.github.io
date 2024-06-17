@@ -9,17 +9,16 @@ const Home = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = [ "Web Developer" ];
+    const toRotate = ["Web Developer"];
     const period = 2000;
 
     useEffect(() => {
         let ticker = setInterval(() => {
             tick();
         }, delta);
-    
         return () => { clearInterval(ticker) };
     }, [text])
-    
+
     const tick = () => {
         let i = loopNum % toRotate.length;
         let fullText = toRotate[i];
@@ -46,7 +45,6 @@ const Home = () => {
     }
 
     const handleDownload = () => {
-        // Create a link element
         const link = document.createElement('a');
         link.href = resume;
         link.download = 'joecinng_resume.pdf';
@@ -54,19 +52,19 @@ const Home = () => {
     };
 
     return (
-        <section id="home" class="home section text-white">
+        <section id="home" className="home section text-white">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
+                    <Col xs={12} md={6} xl={5} className="order-1 order-md-2">
+                        <img src={headerImg} alt="Header image" width={600} height={600} className="img-fluid"></img>
+                    </Col>
+                    <Col xs={12} md={6} xl={7} className="order-2 order-md-1 home-left-section">
                         <span className="tagline">
                             Hi, my name is
                         </span>
-                        <p className="home-name">{`Joe Cin NG`}</p>
+                        <h2>Joe Cin NG</h2>
                         <p><span id="description-text">I am a Software Developer based in Melbourne, Australia. I am passionate about creating innovative solutions and exploring new technologies.</span></p>
-                        <button onClick={handleDownload} class="btn-style"><i class="bi bi-cloud-arrow-down-fill"></i>Resume</button>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Header image"></img>
+                        <button onClick={handleDownload} className="btn-style"><i className="bi bi-cloud-arrow-down-fill"></i>Resume</button>
                     </Col>
                 </Row>
             </Container>
