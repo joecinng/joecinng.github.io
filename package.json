@@ -18,6 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "sync": "aws s3 --profile joes-windows sync ./build s3://joecinng.com/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

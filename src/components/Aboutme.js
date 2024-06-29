@@ -5,14 +5,14 @@ import Tabs from 'react-bootstrap/Tabs';
 
 const Aboutme = () => {
     return (
-        <section id="aboutme" class="aboutme section text-white">
+        <section id="aboutme" class="section text-white">
             <Container>
-                <Row className="align-items-center">
-                    <Col xs={12} md={12} xl={5} className="text-center mx-auto">
+                <Row className="d-flex justify-content-center align-items-center">
+                    <Col xs={12} md={12} xl={4} className="text-center mx-auto">
                         <h3 className="py-3">About Me</h3>
                         <img src={MyPicture} alt="My profile picture" className="profile-pic"></img>
                     </Col>
-                    <Col xs={12} md={12} xl={7}>
+                    <Col xs={12} md={12} xl={8}>
                         <p>
                             Hello! I'm a dedicated Software Developer based in Melbourne, Australia. 
                             I started my tech journey with a Bachelor of Computer Science in Malaysia and graduated from Swinburne University of Technology in July 2022. 
@@ -21,8 +21,6 @@ const Aboutme = () => {
                         <p>
                             I'm passionate about creating innovative software that solves real-world problems. 
                             I love learning new technologies and building applications that make life easier for users.
-                        </p>
-                        <p>
                             As a Software Developer, I possess diverse skill set that allows me to develop mobile and web applications. 
                             Besides, I have a passion in UX/UI design and enjoy turning complex problems into simple, user-friendly solutions.
                         </p>

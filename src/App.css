@@ -1,3 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    /*========== Font and typography ==========*/
+    --body-font: "Poppins", sans-serif;
+    --sourcecode-font: "Source Code Pro", monospace;
+
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --big-font-size: 3.5rem;
+    --normal-font-size: 0.875remrem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.753rem;
+    --tiny-font-size: 0.625rem;
+}
+
+#home, #aboutme, #contact, #project, #skills, #work-experiences {
+    font-size: var(--small-font-size);
+}
+
 .navbar {
     background-color: black !important;
     position: fixed;
@@ -24,13 +43,13 @@
 }
 
 .section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex !important;
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
     flex-direction: column;
-    padding: 20px; 
+    padding-top: 20px;
 }
 
 .scroll-container {
@@ -41,16 +60,12 @@
     transition: 0.5s;
 }
 
-#aboutme, #projects, #work-experiences, #contact {
-    display: block;
-}
-
 .nav-link.active {
     color: white;
 }
 
 .navbar-icon {
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     margin-right: 0.5rem;
 }
 
@@ -63,15 +78,8 @@
     color: aqua;
 }
 
-#home p { 
-    font-size: large;
-}
-
 .btn-style {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left:20px;
-    padding-right: 20px;
+    padding:10px 20px;
     color: white;
     background-color: black;
     border: 1px solid white;
@@ -82,18 +90,17 @@
     align-items: center;
     display: flex;
     align-content: center;
-    font-size: large;
 }
 
 .btn-style:hover {
     color: black;
     background-color: white;
-    transition: color 0.5s, background-color 0.5s;
+    transition: color 0.4s, background-color 0.4s;
 }
 
 .btn-style i {
     margin-right: 10px;
-    font-size: 1.3rem;
+    font-size: 1.0rem;
 }
 
 /*============================== About Me ==============================*/
@@ -104,10 +111,9 @@
 }
 
 #aboutme p {
-    line-height: 1.8rem;
+    text-align: justify;
 }
 
-/* CustomTabs.css */
 #aboutme .nav-tabs {
     border-bottom: none;
 }
@@ -162,7 +168,7 @@
 #skills .button {
     color: white;
     background-color: black;
-    font-size: 18px;
+    font-size: var(--small-font-size);
     font-weight: 500;
     border: 1px solid #555555;
 }
@@ -182,21 +188,21 @@
     border: none;
 }
 
-#skills .skills-box {
+.skills-box {
     border: 2px solid #555555;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 20px;
     margin: 10px;
     display: block;
     margin-left: 10px;
     text-align: center;
 }
 
-#skills .active-skills-box {
+.active-skills-box {
     color: black;
     background-color: white;
     border-radius: 20px;
-    padding: 10px 20px;
+    padding: 20px;
     margin: 10px;
     display: block;
     margin-left: 10px;
@@ -209,14 +215,18 @@
     margin: 10px;
 }
 
-#skills .skills-box:hover {
+.icon-container img {
+    width: 1.9rem;
+}
+
+.skills-box:hover {
     border: 2px solid white;
     transition: border 0.4s;
     cursor: pointer;
 }
 
 .icon-container .tooltip {
-    font-size: 19px;
+    font-size: var(--normal-font-size);
     font-weight: 500;
     visibility: hidden;
     width: 120px;
@@ -251,27 +261,31 @@
 }
 
 #skills .soft-skills-icon {
-    font-size: 2.4rem;
+    font-size: 1.3rem;
 }
 
-#skills .skills-box h4 {
+.skills-box h4 {
     padding-top: 20px;
     padding-bottom: 10px;
 }
 
 /*============================== Projects Page ==============================*/
+#projects .carousel-item {
+    top:5px;
+    min-height: 450px !important;
+}
+
 .project-section {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 970px;
     margin: 0 auto;
-    height: 600px; /* Adjust height as needed */
 }
 
 .project-container {
     position: absolute;
-    bottom: 50px;
-    left: 40px;
+    top: 80px;
+    left: 50px;
     z-index: 10; /* Ensures the project container is above the image */
     max-width: 50%;
 }
@@ -281,11 +295,14 @@
     background-color: #4169E1;
     color: white;
     border-radius: 10px;
+    font-size: var(--smaller-font-size);
+    box-shadow: 6px 6px 10px -5px black;
 }
 
 .project-description {
-    font-size: 1em;
-    margin: 10px 0;
+    font-size: var(--smaller-font-size);
+    margin: 5px 0;
+    text-align: justify;
 }
 
 .project-note {
@@ -298,15 +315,14 @@
     top: 0;
     right: 0;
     z-index: 1;
-    width: 70%;
-    height: 10px !important;
-    padding-top: 40px;
+    width: 65%;
+    padding-top: 10px;
 }
 
 .project-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .project-featured {
@@ -320,17 +336,26 @@
     align-items: center;
 }
 
-.project-title button {
-    font-size: 1.7rem !important;
+.project-title a {
+    font-size: 1.2rem !important;
     margin-left: 15px;
     background-color: transparent;
     color: white;
-    clip-path: circle();
 }
 
-.project-title button:hover {
+.project-title a:hover {
     color: cyan;
     transition: color 0.4s ease-in-out;
+}
+
+.project-languages div {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 40px;
+    font-family: var(--sourcecode-font);
+    font-weight: 500;
+    color: white;
+    font-size: var(--small-font-size);
 }
 
 /*============================== Work Experience Page ==============================*/
@@ -338,18 +363,21 @@
     display: table;
     height: 100%;
 }
+
 .vertical-line-icon:after {
     content: '';
     display: table;
-    margin: 0 10px;
+    margin: 0 7px;
     width: 2px;
     height: 90%;
     background-color: #555555;
     margin-top:5px;
 }
+
 .last-vertical-line:after {
     height: 65% !important;
 }
+
 .work-box {
     border: 2px solid #555555;
     border-radius: 20px;
@@ -357,13 +385,51 @@
     display: block;
     margin-left: 10px;
 }
+
 #work-experiences .grey-text {
     color: grey;
     font-weight: 500;
     font-style: italic;
-    font-size:18px;
+    font-size:var(--smaller-font-size);
 }
 
+/*============================== Service Page ==============================*/
+.service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 400px;
+    text-align: center;
+    font-size: var(--normal-font-size);
+}
+
+.service-box h5 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-box p {
+    font-size: 0.8rem;
+}
+
+.service-box button {
+    display: block;
+    justify-content: baseline;
+    margin-top: 20px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.service-box a {
+    font-size: 0.85rem !important;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
 
 /*============================== Contact Page ==============================*/
 .social-icon a {
@@ -372,7 +438,7 @@
     border: solid 2px white;
     border-radius: 50%;
     margin: 10px;
-    padding: 20px;
+    padding: 15px;
     display: inline-flex;
     line-height: 1;
 }
@@ -385,24 +451,27 @@
 }
 
 .bigger-icon {
-    font-size: 35px;
+    font-size: 25px;
 }
 
 #contact form {
     background: black;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     border: 1px solid white;
+    font-size: var(--smaller-font-size) !important;
 }
 
 #contact form label {
     color: #bbb;
+    font-size: var(--smaller-font-size) !important;
 }
 
 #contact form input, #contact form textarea {
     background: black;
     color: white;
     border: 1px solid white;
+    font-size: var(--smaller-font-size) !important;
 }
 
 #contact form input::placeholder, form textarea::placeholder {
@@ -414,12 +483,11 @@
     background: white;
     color: black;
     border: none;
-    margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1rem;
     border-radius: 4px;
     font-weight: 500;
     width: 100%;
+    font-size: var(--normal-font-size) !important;
 }
 
 /*============================== Animation ==============================*/
@@ -479,12 +547,12 @@
     }
 }
 
-#home h1, #home p, #home img, #home span, #home .btn-style {
+#home h1, #home p, #home img, #home span, #home .btn-style, #home h3 {
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
 
-#home h1, #home span, #home p, #home .btn-style {
+#home h1, #home span, #home p, #home .btn-style, #home h3 {
     animation-delay: 1.5s; 
 }
 
@@ -503,7 +571,6 @@
         align-items: center;
         scroll-snap-align: start;
         padding-top: 60px; /* Adjust for fixed navbar */
-        padding-bottom: 60px;
     }
     
     .scroll-container {
@@ -520,6 +587,10 @@
     .home-left-section button {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .skills-box {
+        width: 70% !important;
     }
 
     .project-section {
@@ -546,6 +617,15 @@
 
     .project-title button {
         font-size: 1.5rem !important;
+    }
+
+    .carousel {
+        display: none; /* Hide the carousel */
+    }
+
+    .project-container {
+        display: block;
+        margin-bottom: 20px;
     }
 }
 

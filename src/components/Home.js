@@ -62,7 +62,7 @@ const Home = () => {
                         <span className="tagline">
                             Hi, my name is
                         </span>
-                        <h2>Joe Cin NG</h2>
+                        <h3 className="my-3">Joe Cin NG</h3>
                         <p><span id="description-text">I am a Software Developer based in Melbourne, Australia. I am passionate about creating innovative solutions and exploring new technologies.</span></p>
                         <button onClick={handleDownload} className="btn-style"><i className="bi bi-cloud-arrow-down-fill"></i>Resume</button>
                     </Col>

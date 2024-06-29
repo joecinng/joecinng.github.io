@@ -6,7 +6,7 @@ const Workexperience = () => {
     return (
         <section id="work-experiences" class="work-experiences section text-white">
             <Container>
-                <h3 className="py-5 text-center">Work Experiences</h3>
+                <h3 className="pb-4 text-center">Work Experiences</h3>
                     <Stack gap={3} className="d-flex align-items-center justify-content-center">
                         <div className="p-2 d-flex align-item-center">
                             <Row>
@@ -20,11 +20,11 @@ const Workexperience = () => {
                                 <Col md={11} sm={12}>
                                     <span className="work-box">
                                         <Row>
-                                            <Col md={7} sm={12}><h5>Inverloch Bike Hire</h5></Col>
+                                            <Col md={7} sm={12}><h6>Inverloch Bike Hire</h6></Col>
                                             <Col md={{ span: 4, offset: 1 }} sm={12}><span class="text-grey">Jan - Mar 2024</span></Col>
                                         </Row>
-                                        <h6>Summer Tech Internship</h6>
-                                        <ul>
+                                        <p>Summer Tech Internship</p>
+                                        <ul className="py-0 my-0">
                                             <li>Developed a WordPress plugin for bike rental management.</li>
                                         </ul>
                                     </span>
@@ -43,11 +43,11 @@ const Workexperience = () => {
                                 <Col md={11} sm={12}>
                                     <span className="work-box">
                                         <Row>
-                                            <Col md={5} sm={12}><h5>Virtetic</h5></Col>
-                                            <Col md={{ span: 3, offset: 4 }} sm={12}><span class="grey-text">Jan 2023</span></Col>
+                                            <Col md={5} sm={12}><h6>Virtetic</h6></Col>
+                                            <Col md={{ span: 3, offset: 4 }} sm={12}><span class="text-grey">Jan 2023</span></Col>
                                         </Row>
-                                        <h6>Summer Software Developer Internship</h6>
-                                        <ul>
+                                        <p>Summer Software Developer Internship</p>
+                                        <ul className="py-0 my-0">
                                             <li>Implemented a game menu and used Scrum Agile for SDLC.</li>
                                         </ul>
                                     </span>

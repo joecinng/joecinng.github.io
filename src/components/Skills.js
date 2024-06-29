@@ -9,9 +9,9 @@ const Skills = () => {
             case 0:
                 return (
                     <Container>
-                        <Row className="d-flex justify-content-center">
+                        <Row className="d-flex justify-content-center align-items-center">
                             <Col lg={3} md={3} sm={9} className="skills-box active-skills-box">
-                                <h4>Frontend Development</h4>
+                                <h5>Frontend Development</h5>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/react-icon.png')} alt="react icon" width={50} className="icon" />
                                     <span className="tooltip">React</span>
@@ -34,7 +34,7 @@ const Skills = () => {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h4>Backend Development</h4>
+                                <h5>Backend Development</h5>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/nodejs-icon.png')} alt="nodejs icon" width={50} className="icon" />
                                     <span className="tooltip">NodeJS</span>
@@ -57,7 +57,7 @@ const Skills = () => {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h4>Development Tools</h4>
+                                <h5>Development Tools</h5>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/vscode-icon.png')} alt="VSCode icon" width={50} className="icon" />
                                     <span className="tooltip">Visual Studio Code</span>
@@ -82,7 +82,7 @@ const Skills = () => {
                         </Row>
                         <Row className="d-flex justify-content-center">
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h4>UX/UI Design</h4>
+                                <h5>UX/UI Design</h5>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/adobe-xd-icon.png')} alt="AdobeXD icon" width={50} className="icon" />
                                     <span className="tooltip">Adobe XD</span>
@@ -93,14 +93,14 @@ const Skills = () => {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h4>Mobile Development</h4>
+                                <h5>Mobile Development</h5>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/kotlin-icon.png')} alt="Kotlin icon" width={50} className="icon" />
                                     <span className="tooltip">Kotlin</span>
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h4>Deployment and Hosting</h4>
+                                <h5>Deployment and Hosting</h5>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/jenkins-icon.png')} alt="Jenkins icon" width={50} className="icon" />
                                     <span className="tooltip">Jenkins</span>
@@ -123,35 +123,35 @@ const Skills = () => {
                         <Row className="d-flex align-items-center justify-content-center">
                             <Col lg={3} md={3} sm={9} className="skills-box active-skills-box">
                                 <i class="bi bi-chat-fill soft-skills-icon"></i>
-                                <h4>Communication</h4>
-                                <p><b>Effective communication in team projects</b></p>
+                                <h5>Communication</h5>
+                                <p>Effective communication in team projects</p>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
                                 <i class="bi bi-people-fill soft-skills-icon"></i>
-                                <h4>Collaboration</h4>
-                                <p><b>Working effectively in a team environment</b></p>
+                                <h5>Collaboration</h5>
+                                <p>Working effectively in a team environment</p>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
                                 <i class="bi bi-puzzle-fill soft-skills-icon"></i>
-                                <h4>Problem Solving</h4>
-                                <p><b>Analytical thinking to solve problems</b></p>
+                                <h5>Problem Solving</h5>
+                                <p>Analytical thinking to solve problems</p>
                             </Col>
                         </Row>
                         <Row className="d-flex justify-content-center">
                             <Col lg={3} md={3} sm={9} className="skills-box">
                                 <i class="bi bi-person-raised-hand soft-skills-icon"></i>
-                                <h4>Leadership</h4>
-                                <p><b>Leading projects to successful outcomes</b></p>
+                                <h5>Leadership</h5>
+                                <p>Leading projects to successful outcomes</p>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
                                 <i class="bi bi-clock soft-skills-icon"></i>
-                                <h4>Time Management</h4>
-                                <p><b>Effectively organizing and prioritizing tasks</b></p>
+                                <h5>Time Management</h5>
+                                <p>Effectively organizing and prioritizing tasks</p>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
                                 <i class="bi bi-arrow-left-right soft-skills-icon"></i>
-                                <h4>Adaptability</h4>
-                                <p><b>Flexibility to adapt and learn new technologies</b></p>
+                                <h5>Adaptability</h5>
+                                <p>Flexibility to adapt and learn new technologies</p>
                             </Col>
                         </Row>
                         
@@ -166,7 +166,7 @@ const Skills = () => {
         <section id="skills" className="skills section text-white">
             <Container>
                 <h3 className="py-3 text-center">Skills</h3>
-                <div className="mt-3 px-5 d-flex justify-content-center pb-3">
+                <div className="px-5 d-flex justify-content-center pb-3">
                     <Button
                         className={`mx-2 px-4 py-2 button ${selectedTab === 0 ? 'active' : ''}`}
                         onClick={() => setSelectedTab(0)}

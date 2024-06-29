@@ -6,6 +6,8 @@ import Project from './components/Project';
 import Skills from './components/Skills';
 import Workexperience from './components/Workexperience';
 import CustomNavbar from './components/navbar';
+import Service from './components/Service';
+//import Footer from './components/Footer';
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Skills/>
         <Project/>
         <Workexperience/>
+        <Service/>
         <Contact/>
       </div>
     </div>

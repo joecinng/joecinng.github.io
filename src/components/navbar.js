@@ -48,7 +48,7 @@ const CustomNavbar = () => {
         <Navbar bg="black" variant="dark" expand="lg" fixed="top" className={scrolled ? "scrolled": ""}>
             <Container>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-center">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
                     <Nav className="mx-auto">
                         <Nav.Link 
                             href="#home" 

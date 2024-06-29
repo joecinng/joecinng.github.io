@@ -77,7 +77,7 @@ const Contact = () => {
                                 <Form.Label>Message</Form.Label>
                                 <Form.Control 
                                     as="textarea" 
-                                    rows={4} 
+                                    rows={2} 
                                     name="message" 
                                     value={message} 
                                     onChange={(e) => setMessage(e.target.value)} 

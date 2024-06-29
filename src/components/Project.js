@@ -1,82 +1,118 @@
 import { Container } from "react-bootstrap";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import Screenshot from "../assets/image/screenshot.png"; // Example image, replace as needed
 
 const data = [
   {
-    image: Screenshot,
+    image: require('../assets/image/project-1.png'),
     featured: "Featured Project",
-    title: "Join Me!",
-    description: "This application provides a feature-rich communication platform where users can register, invite friends, and engage in text chat, video chat, and group video chat. It combines a user-friendly interface, Real-time communication technologies, and robust backend functionality to create an immersive and interactive experience.",
+    title: "All Your Healthy Food",
+    description: "This application provides an online ordering platform where users can register, add items to shopping cart, place order and download receipt. Besides, this application includes the use of Stripe for making secure transactions.",
     demoAccounts: [
-      { email: "test2@test.com", password: "test123" },
-      { email: "test3@test.com", password: "test123" }
+      { email: "admin@gmail.com", password: "admin123" }
     ],
+    link: "https://allyourhealthyfood.joecinng.com",
     note: "The Back-End of this application is hosted on a free server, it takes about 20 seconds to respond to the initial request."
-  },
-  {
-    image: require('../assets/image/600x600.jpg'),
-    featured: "Another Featured Project",
-    title: "Project Two",
-    description: "Description of the second project.",
-    demoAccounts: [],
-    note: ""
-  },
-  {
-    image: require('../assets/image/600x600.jpg'),
-    featured: "Yet Another Project",
-    title: "Project Three",
-    description: "Description of the third project.",
-    demoAccounts: [],
-    note: ""
   }
 ];
 
 const Project = () => {
   const [index, setIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 968);
+
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
 
+  const updateDimensions = () => {
+    setIsMobile(window.innerWidth <= 968);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
     <section id="projects" className="projects section text-white">
       <Container fluid>
-        <h3 className="text-center">My Projects</h3>
-        <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
-          {data.map((project, idx) => (
-            <Carousel.Item key={idx}>
-              <div className="project-section">
-                <div className="project-image">
-                  <img src={project.image} alt={`Screenshot of ${project.title}`} />
+        <h3 className="text-center pt-3">My Projects</h3>
+        {isMobile ? (
+          data.map((project, idx) => (
+            <div className="project-section" key={idx}>
+              <div className="project-container">
+                <span className="project-featured">{project.featured}</span>
+                <h5 className="project-title">
+                  {project.title} <a href={project.link} target="_blank" rel="noreferrer"><i className="bi bi-box-arrow-up-right"></i></a>
+                </h5>
+                <div className="project-info">
+                  <p className="project-description">
+                    {project.description}
+                  </p>
+                  {project.demoAccounts.length > 0 && (
+                    <div className="project-demo-accounts">
+                      <p><b>Demo Accounts:</b><br />
+                        {project.demoAccounts.map((account, index) => (
+                          <span key={index}>Email: {account.email} Pass: {account.password}<br /></span>
+                        ))}
+                      </p>
+                    </div>
+                  )}
+                  {project.note && (
+                    <p><span className="project-note">Note:</span> {project.note}</p>
+                  )}
                 </div>
-                <div className="project-container">
-                  <h6 className="project-featured">{project.featured}</h6>
-                  <h4 className="project-title">
-                    {project.title} <button href=""><i className="bi bi-box-arrow-up-right"></i></button>
-                  </h4>
-                  <div className="project-info">
-                    <p className="project-description">
-                      {project.description}
-                    </p>
-                    {project.demoAccounts.length > 0 && (
-                      <div className="project-demo-accounts">
-                        <p><b>Demo Accounts:</b><br />
-                          {project.demoAccounts.map((account, index) => (
-                            <span key={index}>Email: {account.email} Pass: {account.password}<br /></span>
-                          ))}
-                        </p>
-                      </div>
-                    )}
-                    {project.note && (
-                      <p><span className="project-note">Note:</span> {project.note}</p>
-                    )}
-                  </div>
+                <div className="project-languages">
+                  <div>Laravel</div>
+                  <div>PHP</div>
+                  <div>MySQL</div>
+                  <div>Stripe</div>
                 </div>
               </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+            </div>
+          ))
+        ) : (
+          <Carousel activeIndex={index} onSelect={handleSelect} interval={null}>
+            {data.map((project, idx) => (
+              <Carousel.Item key={idx}>
+                <div className="project-section">
+                  <div className="project-image">
+                    <img src={project.image} alt={`Screenshot of ${project.title}`} />
+                  </div>
+                  <div className="project-container">
+                    <span className="project-featured">{project.featured}</span>
+                    <h5 className="project-title">
+                      {project.title} <a href={project.link} target="_blank" rel="noreferrer"><i className="bi bi-box-arrow-up-right"></i></a>
+                    </h5>
+                    <div className="project-info">
+                      <p className="project-description">
+                        {project.description}
+                      </p>
+                      {project.demoAccounts.length > 0 && (
+                        <div className="project-demo-accounts">
+                          <p><b>Demo Accounts:</b><br />
+                            {project.demoAccounts.map((account, index) => (
+                              <span key={index}>Email: {account.email} Pass: {account.password}<br /></span>
+                            ))}
+                          </p>
+                        </div>
+                      )}
+                      {project.note && (
+                        <p><span className="project-note">Note:</span> {project.note}</p>
+                      )}
+                    </div>
+                    <div className="project-languages">
+                      <div>Laravel</div>
+                      <div>PHP</div>
+                      <div>MySQL</div>
+                      <div>Stripe</div>
+                    </div>
+                  </div>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        )}
       </Container>
     </section>
   );
