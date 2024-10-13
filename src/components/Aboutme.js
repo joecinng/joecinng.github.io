@@ -12,7 +12,7 @@ const Aboutme = () => {
                         <h3 className="py-3">About Me</h3>
                         <img src={MyPicture} alt="My profile picture" className="profile-pic"></img>
                     </Col>
-                    <Col xs={12} md={12} xl={8}>
+                    <Col xs={12} md={12} xl={8} className="aboutme-col">
                         <p>
                             Hello! I'm a dedicated Software Developer based in Melbourne, Australia. 
                             I started my tech journey with a Bachelor of Computer Science in Malaysia and graduated from Swinburne University of Technology in July 2022. 
@@ -43,7 +43,13 @@ const Aboutme = () => {
                             <Tab eventKey="certificate" title="Certificate">
                                 <ul>
                                     <li>
-                                        <div>Cisco: Network Switching & Routing</div>
+                                        <div>Cisco CCNA: Introduction to Networks</div>
+                                    </li>
+                                    <li>
+                                        <div>Cisco CCNA: Switching, Routing, and Wireless Essentials</div>
+                                    </li>
+                                    <li>
+                                        <div>Microsoft: Deploy cloud-native apps using Azure Container Apps</div>
                                     </li>
                                 </ul>
                             </Tab>

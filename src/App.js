@@ -10,6 +10,7 @@ import Service from './components/Service';
 //import Footer from './components/Footer';
 
 function App() {
+  // return <Service/>
   return (
     <div className="App">
       <CustomNavbar/>
@@ -19,7 +20,6 @@ function App() {
         <Skills/>
         <Project/>
         <Workexperience/>
-        <Service/>
         <Contact/>
       </div>
     </div>

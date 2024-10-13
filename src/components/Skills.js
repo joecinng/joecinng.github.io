@@ -9,7 +9,7 @@ const Skills = () => {
             case 0:
                 return (
                     <Container>
-                        <Row className="d-flex justify-content-center align-items-center">
+                        <Row className="d-flex justify-content-center">
                             <Col lg={3} md={3} sm={9} className="skills-box active-skills-box">
                                 <h5>Frontend Development</h5>
                                 <div className="icon-container">
@@ -57,26 +57,30 @@ const Skills = () => {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h5>Development Tools</h5>
+                                <h5>Deployment and Hosting</h5>
                                 <div className="icon-container">
-                                    <img src={require('../assets/icons/vscode-icon.png')} alt="VSCode icon" width={50} className="icon" />
-                                    <span className="tooltip">Visual Studio Code</span>
+                                    <img src={require('../assets/icons/jenkins-icon.png')} alt="Jenkins icon" width={50} className="icon" />
+                                    <span className="tooltip">Jenkins</span>
                                 </div>
                                 <div className="icon-container">
-                                    <img src={require('../assets/icons/postman-icon.png')} alt="Postman icon" width={50} className="icon" />
-                                    <span className="tooltip">Postman</span>
+                                    <img src={require('../assets/icons/aws-icon.png')} alt="AWS icon" width={50} className="icon" />
+                                    <span className="tooltip">AWS</span>
+                                </div>
+                                <div className="icon-container">
+                                    <img src={require('../assets/icons/docker-icon.png')} alt="Docker icon" width={50} className="icon" />
+                                    <span className="tooltip">Docker</span>
+                                </div>
+                                <div className="icon-container">
+                                    <img src={require('../assets/icons/azure-icon.png')} alt="Azure icon" width={50} className="icon" />
+                                    <span className="tooltip">Azure</span>
+                                </div>
+                                <div className="icon-container">
+                                    <img src={require('../assets/icons/terraform-icon.png')} alt="Terraform icon" width={50} className="icon" />
+                                    <span className="tooltip">Terraform</span>
                                 </div>
                                 <div className="icon-container">
                                     <img src={require('../assets/icons/github-icon.png')} alt="GitHub icon" width={50} className="icon" />
                                     <span className="tooltip">GitHub</span>
-                                </div>
-                                <div className="icon-container">
-                                    <img src={require('../assets/icons/trello-icon.png')} alt="Trello icon" width={50} className="icon" />
-                                    <span className="tooltip">Trello</span>
-                                </div>
-                                <div className="icon-container">
-                                    <img src={require('../assets/icons/android-studio-icon.png')} alt="Android Studio icon" width={50} className="icon" />
-                                    <span className="tooltip">Android Studio</span>
                                 </div>
                             </Col>
                         </Row>
@@ -100,18 +104,22 @@ const Skills = () => {
                                 </div>
                             </Col>
                             <Col lg={3} md={3} sm={9} className="skills-box">
-                                <h5>Deployment and Hosting</h5>
+                                <h5>Development Tools</h5>
                                 <div className="icon-container">
-                                    <img src={require('../assets/icons/jenkins-icon.png')} alt="Jenkins icon" width={50} className="icon" />
-                                    <span className="tooltip">Jenkins</span>
+                                    <img src={require('../assets/icons/vscode-icon.png')} alt="VSCode icon" width={50} className="icon" />
+                                    <span className="tooltip">Visual Studio Code</span>
                                 </div>
                                 <div className="icon-container">
-                                    <img src={require('../assets/icons/aws-icon.png')} alt="AWS icon" width={50} className="icon" />
-                                    <span className="tooltip">AWS</span>
+                                    <img src={require('../assets/icons/postman-icon.png')} alt="Postman icon" width={50} className="icon" />
+                                    <span className="tooltip">Postman</span>
                                 </div>
                                 <div className="icon-container">
-                                    <img src={require('../assets/icons/docker-icon.png')} alt="Docker icon" width={50} className="icon" />
-                                    <span className="tooltip">Docker</span>
+                                    <img src={require('../assets/icons/trello-icon.png')} alt="Trello icon" width={50} className="icon" />
+                                    <span className="tooltip">Trello</span>
+                                </div>
+                                <div className="icon-container">
+                                    <img src={require('../assets/icons/android-studio-icon.png')} alt="Android Studio icon" width={50} className="icon" />
+                                    <span className="tooltip">Android Studio</span>
                                 </div>
                             </Col>
                         </Row>
