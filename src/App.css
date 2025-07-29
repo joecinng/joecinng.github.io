@@ -13,7 +13,12 @@
     --tiny-font-size: 0.625rem;
 }
 
-#home, #aboutme, #contact, #project, #skills, #work-experiences {
+#home,
+#aboutme,
+#contact,
+#project,
+#skills,
+#work-experiences {
     font-size: var(--small-font-size);
 }
 
@@ -30,7 +35,7 @@
     margin: 0 auto;
     text-align: center;
 }
-  
+
 .navbar .navbar-collapse {
     text-align: center;
 }
@@ -57,7 +62,9 @@
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
-    transition: 0.5s;
+    scroll-behavior: smooth;
+    /* Smooth scroll transition */
+    transition: all 0.5s ease;
 }
 
 .nav-link.active {
@@ -79,7 +86,7 @@
 }
 
 .btn-style {
-    padding:10px 20px;
+    padding: 10px 20px;
     color: white;
     background-color: black;
     border: 1px solid white;
@@ -155,7 +162,7 @@
 }
 
 #aboutme .nav-tabs .nav-link:hover::after {
-    transform: scaleX(0); 
+    transform: scaleX(0);
 }
 
 .text-grey {
@@ -243,9 +250,11 @@
     padding: 5px 0;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Position above the icon */
+    bottom: 125%;
+    /* Position above the icon */
     left: 50%;
-    margin-left: -60px; /* Center the tooltip */
+    margin-left: -60px;
+    /* Center the tooltip */
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -253,7 +262,8 @@
 .icon-container .tooltip::after {
     content: "";
     position: absolute;
-    top: 100%; /* At the bottom of the tooltip */
+    top: 100%;
+    /* At the bottom of the tooltip */
     left: 50%;
     margin-left: -5px;
     border-width: 5px;
@@ -277,7 +287,7 @@
 
 /*============================== Projects Page ==============================*/
 #projects .carousel-item {
-    top:5px;
+    top: 5px;
     min-height: 450px !important;
 }
 
@@ -292,7 +302,8 @@
     position: absolute;
     top: 80px;
     left: 50px;
-    z-index: 10; /* Ensures the project container is above the image */
+    z-index: 10;
+    /* Ensures the project container is above the image */
     max-width: 50%;
 }
 
@@ -316,7 +327,7 @@
     font-weight: bold;
 }
 
-.project-note-p a { 
+.project-note-p a {
     color: white;
     font-style: italic;
 }
@@ -383,7 +394,7 @@
     width: 2px;
     height: 90%;
     background-color: #555555;
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 .last-vertical-line:after {
@@ -402,7 +413,7 @@
     color: grey;
     font-weight: 500;
     font-style: italic;
-    font-size:var(--smaller-font-size);
+    font-size: var(--smaller-font-size);
 }
 
 /*============================== Service Page ==============================*/
@@ -479,14 +490,16 @@
     font-size: var(--smaller-font-size) !important;
 }
 
-#contact form input, #contact form textarea {
+#contact form input,
+#contact form textarea {
     background: black;
     color: white;
     border: 1px solid white;
     font-size: var(--smaller-font-size) !important;
 }
 
-#contact form input::placeholder, form textarea::placeholder {
+#contact form input::placeholder,
+form textarea::placeholder {
     color: grey !important;
     font-style: italic;
 }
@@ -508,21 +521,24 @@
         opacity: 0;
         transform: translateY(-50px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
     }
 }
-  
+
 .nav-link {
-    opacity: 0; /* Start hidden */
-    animation: slideInFromTop 0.5s forwards; /* Slide in and keep the final state */
+    opacity: 0;
+    /* Start hidden */
+    animation: slideInFromTop 0.5s forwards;
+    /* Slide in and keep the final state */
 }
-  
+
 .nav-link:nth-child(1) {
     animation-delay: 0.3s;
 }
-  
+
 .nav-link:nth-child(2) {
     animation-delay: 0.6s;
 }
@@ -543,6 +559,7 @@
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -553,19 +570,29 @@
         transform: translateY(50px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-#home h1, #home p, #home img, #home span, #home .btn-style, #home h3 {
+#home h1,
+#home p,
+#home img,
+#home span,
+#home .btn-style,
+#home h3 {
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
 
-#home h1, #home span, #home p, #home .btn-style, #home h3 {
-    animation-delay: 1.5s; 
+#home h1,
+#home span,
+#home p,
+#home .btn-style,
+#home h3 {
+    animation-delay: 1.5s;
 }
 
 #home img {
@@ -582,9 +609,10 @@
         justify-content: center;
         align-items: center;
         scroll-snap-align: start;
-        padding-top: 60px; /* Adjust for fixed navbar */
+        padding-top: 60px;
+        /* Adjust for fixed navbar */
     }
-    
+
     .scroll-container {
         overflow-y: auto;
         scroll-snap-type: none;
@@ -600,7 +628,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-    
+
     .active-skills-box {
         margin-top: 10px !important;
         margin-bottom: 5px !important;
@@ -613,7 +641,8 @@
     }
 
     .project-section {
-        height: auto; /* Adjust height for smaller screens */
+        height: auto;
+        /* Adjust height for smaller screens */
         padding: 20px;
     }
 
@@ -644,7 +673,8 @@
     }
 
     .carousel {
-        display: none; /* Hide the carousel */
+        display: none;
+        /* Hide the carousel */
     }
 
     .project-container {
@@ -658,3 +688,33 @@
     }
 }
 
+/*============================== Global Styles ==============================*/
+/* Global scrollbar styling */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    /* Dark track (optional) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    /* White draggable thumb */
+    border-radius: 5px;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4169E1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 12px 16px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}

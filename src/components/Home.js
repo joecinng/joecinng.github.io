@@ -56,14 +56,14 @@ const Home = () => {
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={5} className="order-1 order-md-2">
-                        <img src={headerImg} alt="Header image" width={600} height={600} className="img-fluid"></img>
+                        <img src={headerImg} alt="Header image" width={450} height={450} className="img-fluid"></img>
                     </Col>
                     <Col xs={12} md={6} xl={7} className="order-2 order-md-1 home-left-section">
                         <span className="tagline">
                             Hi, my name is
                         </span>
                         <h3 className="my-3">Joe Cin NG</h3>
-                        <p><span id="description-text">I am a Software Developer based in Melbourne, Australia. I am passionate about creating innovative solutions and exploring new technologies.</span></p>
+                        <p className="fs-6"><span id="description-text">I am a Software Developer based in Melbourne, Australia. I am passionate about creating innovative solutions and exploring new technologies.</span></p>
                         <button onClick={handleDownload} className="btn-style"><i className="bi bi-cloud-arrow-down-fill"></i>Resume</button>
                     </Col>
                 </Row>

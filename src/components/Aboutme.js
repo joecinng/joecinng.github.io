@@ -13,20 +13,15 @@ const Aboutme = () => {
                         <img src={MyPicture} alt="My profile picture" className="profile-pic"></img>
                     </Col>
                     <Col xs={12} md={12} xl={8} className="aboutme-col">
-                        <p>
-                            Hello! I'm a dedicated Software Developer based in Melbourne, Australia. 
-                            I started my tech journey with a Bachelor of Computer Science in Malaysia and graduated from Swinburne University of Technology in July 2022. 
-                            Currently, I'm pursuing a Master of IT at Deakin University, set to graduate in July 2025.
-                        </p>
-                        <p>
-                            I'm passionate about creating innovative software that solves real-world problems. 
+                        <p className="fs-6">
+                            Hello! A little bit about myself, I love creating innovative software that solves real-world problems.
                             I love learning new technologies and building applications that make life easier for users.
-                            As a Software Developer, I possess diverse skill set that allows me to develop mobile and web applications. 
-                            Besides, I have a passion in UX/UI design and enjoy turning complex problems into simple, user-friendly solutions.
+                            As a Software Developer, I have diverse skillsets that allow me to develop mobile and web applications.
+                            Besides, I have a passion for UX/UI design and enjoy turning complex problems into simple, user-friendly solutions.
                         </p>
                         <Tabs
                             id="uncontrolled-tab-example"
-                            className="mb-3"
+                            className="mb-3 fs-6"
                         >
                             <Tab eventKey="education" title="Education">
                                 <ul>
@@ -43,13 +38,13 @@ const Aboutme = () => {
                             <Tab eventKey="certificate" title="Certificate">
                                 <ul>
                                     <li>
-                                        <div>Cisco CCNA: Introduction to Networks</div>
+                                        <div className="mb-2">Cisco CCNA: Introduction to Networks</div>
                                     </li>
                                     <li>
-                                        <div>Cisco CCNA: Switching, Routing, and Wireless Essentials</div>
+                                        <div className="mb-2">Cisco CCNA: Switching, Routing, and Wireless Essentials</div>
                                     </li>
                                     <li>
-                                        <div>Microsoft: Deploy cloud-native apps using Azure Container Apps</div>
+                                        <div className="mb-2">Microsoft: Deploy cloud-native apps using Azure Container Apps</div>
                                     </li>
                                 </ul>
                             </Tab>
